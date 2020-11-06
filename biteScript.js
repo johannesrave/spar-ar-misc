@@ -170,39 +170,3 @@ function moveObjectsToPoints(objects, points) {
         object.transform.z = point.z;
     }
 }
-
-/*
-const objectName = 'target1';
-const mouthMarkerName = 'plane1';
-
-const [target, mouthMarker3D, mouthCanvas, mouthPos2DMarker] = await Promise.all([
-    S.root.findFirst(objectName),
-    S.root.findFirst(mouthMarkerName),
-    S.root.findFirst("mouthCanvas"),
-    S.root.findFirst("mouthPos")
-]).catch((error) => D.log(error));
-
-// Center of mouth marker:
-let mouthCenterInCameraSpace = F.face(0).cameraTransform.applyToPoint(F.face(0).mouth.center)
-mouthMarker3D.transform.x = mouthCenterInCameraSpace.x;
-mouthMarker3D.transform.y = mouthCenterInCameraSpace.y;
-
-D.watch("mouthX 3D:", mouthMarker3D.transform.x)
-D.watch("mouthY 3D:", mouthMarker3D.transform.y)
-
-// Trying to use canvas-coordinates for game logic:
-
-// Canvas height and width
-const canvasWidth = mouthCanvas.width
-const canvasHeight = mouthCanvas.height
-
-let mouthPos2D = S.projectToScreen(mouthCenterInCameraSpace);
-mouthPos2DMarker.transform.x = mouthPos2D.x.sub(mouthPos2DMarker.width.div(2));
-mouthPos2DMarker.transform.y = mouthPos2D.y.add(mouthPos2DMarker.height).mul(-1).add(canvasHeight);
-// mouthPos2DMarker.transform.y = canvasHeight.sub(mouthPos2D.y).sub(mouthPos2DMarker.height.div(2));
-// D.log(mouthPos2DMarker.transform.x.pinLastValue());
-// D.log(mouthPos2DMarker.transform.y.pinLastValue());
-
-D.watch("mouthX 2D:", mouthPos2D.x)
-D.watch("mouthY 2D:", mouthPos2D.y)
-*/
