@@ -3,3 +3,5 @@
 /.idea/scripts.iml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/package.json
+/tsconfig.json
