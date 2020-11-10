@@ -16,6 +16,8 @@ const trackedPlaneName = 'planeTracker0';
 (async function () {
     D.log("Script activated");
 
+    /** @type { SceneObjectBase[] } */
+        // @ts-ignore
     let [object, pivot, trackedPlane, target] = await Promise.all([
         S.root.findFirst(objectName),
         S.root.findFirst(pivotName),
@@ -67,6 +69,7 @@ const trackedPlaneName = 'planeTracker0';
 
     let numberFormat = "{:2f}";
     // let numberFormat = "{:02f}";
+    /** @type {import('ReactiveModule').StringSignal} */
     let debugString = "";
     debugString = R.concat(debugString, "DeviceMotion (x,y,z):");
     debugString = debugString.concat("\n");
